@@ -49,7 +49,7 @@ public class Pelicula {
     @Column(name = "pel_calificacion")    
     private Integer calificacion;
     
-    @OneToMany (mappedBy = "personaje")
+    @OneToMany (mappedBy = "pelicula")
     List <Personaje> personajeList;
     
     @ManyToOne
@@ -68,6 +68,8 @@ public class Pelicula {
         this.personajeList = personajeList;
         this.genero = genero;
     }
+
+    
     
     
     
