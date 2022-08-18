@@ -19,7 +19,7 @@ public class Personaje {
     private Integer idpersonaje;
     
     @Basic
-    private String foto;
+    private String imagen;
     private String nombre;
     private String edad;
     private Integer peso;
@@ -30,9 +30,9 @@ public class Personaje {
     public Personaje() {
     }
 
-    public Personaje(Integer idpersonaje, String foto, String nombre, String edad, Integer peso, String historia, Pelicula pelicula) {
+    public Personaje(Integer idpersonaje, String imagen, String nombre, String edad, Integer peso, String historia, Pelicula pelicula) {
         this.idpersonaje = idpersonaje;
-        this.foto = foto;
+        this.imagen = imagen;
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
@@ -40,10 +40,7 @@ public class Personaje {
         this.pelicula = pelicula;
     }
 
-    @Override
-    public String toString() {
-        return "Personaje{" + "idpersonaje=" + idpersonaje + ", foto=" + foto + ", nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + ", historia=" + historia + ", pelicula=" + pelicula + '}';
-    }
+    
     
     
     
