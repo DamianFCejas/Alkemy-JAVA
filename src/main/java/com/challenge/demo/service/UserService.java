@@ -18,7 +18,7 @@ public class UserService {
     
     public boolean isUserEnabled(User user) {
         boolean isUserEnabled = false;
-        List<User> usuarios = repository.findByUsernameAndIsEnabledTrue(user.getEmail());
+        List<User> usuarios = repository.findByEmail(user.getEmail());
         if (!usuarios.isEmpty()) {
             User usuario = usuarios.get(0);
             if (passwordEncoder.matches(user.getPassword(), usuario.getPassword()))
@@ -29,7 +29,7 @@ public class UserService {
     }
     
     public void crearUsuario(User usuario) throws Exception {
-        List<User> usuarios = repository.findByUsernameAndIsEnabledTrue(usuario.getEmail());
+        List<User> usuarios = repository.findByEmail(usuario.getEmail());
         if(!usuarios.isEmpty()){
             throw new Exception("El mail ya está registrado!");
         } else {
