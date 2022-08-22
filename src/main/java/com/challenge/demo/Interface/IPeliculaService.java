@@ -10,4 +10,5 @@ public interface IPeliculaService {
     public void borrarPelicula (Integer id);
     public Pelicula obtenerPelicula (Integer id);
     public void modificarPelicula (Pelicula pelicula);
+    //public Pelicula obtenerPeliculaPorNombre (String titulo);
 }

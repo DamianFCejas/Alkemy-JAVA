@@ -39,5 +39,13 @@ public class PeliculaService implements IPeliculaService {
         repository.save(pelicula);
     }
     
+    /*
+    @Override
+    public Pelicula obtenerPeliculaPorNombre(String titulo) {
+        return (Pelicula) repository.findByTitulo(titulo);
+
+    }
+*/
+    
     
 }
