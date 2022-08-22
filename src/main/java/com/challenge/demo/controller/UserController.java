@@ -20,7 +20,7 @@ public class UserController {
         return service.isUserEnabled(user);
     }
     
-    @PostMapping("/auth /register")
+    @PostMapping("/auth/register")
     public void register(@RequestBody User usuario) throws Exception {
         service.crearUsuario(usuario);
     }
